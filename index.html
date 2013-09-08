@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>speech</title>
+	<script src="speechAPI.js"></script>
+	<script>
+	function initSpeech() {
+		var options = {};
+		
+		options.continuous = false;
+		options.interimResults = true;
+		options.lang = "en-AU";
+		options.keepAlive = true;
+		
+		var resultsElement = document.querySelector("#captions")
+		
+		initSpeechRecognition(options, resultsElement)
+		
+	}
+	
+	window.addEventListener("load", initSpeech, false)</script>
+</head>
+<body>
+<aside id="captions"></aside>
+</body>
+</html>
